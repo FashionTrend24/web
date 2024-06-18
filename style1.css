@@ -1,0 +1,37 @@
+
+
+
+header {
+    background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url(images/fashion-3221102_1280.jpg);
+    background-size: cover; 
+    background-position: center top;
+    background-attachment: fixed;
+    text-align: center;
+}
+body{ 
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+h1,h4{
+  font-family: "Freeman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar {
+  background-color: transparent !important;
+  border: none;
+}
+.card-hover:hover {
+  background-color: #f7f6f5;  
+}
+#news{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(images/fashion-3221102_128011.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+  

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fashion Trend 24</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freeman&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+          <!-- 네비게이션 영역 시작 -->
+      <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+        <div class="container">
+
+          <a class="gugi-font navbar-brand nav-item nav-link" href="index.html">
+            FashionTrend24
+          </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
+                aria-controls="nav-menu" aria-expanded="false" aria-label="메뉴">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav-menu">
+                <ul class="navbar-nav ms-auto my-2">
+                    <li class="nav-item"><a href="index.html" target="_blank" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="first.html" target="_blank" class="nav-link" >Trend</a></li>
+                    <li class="nav-item"><a href="second.html" target="_blank" class="nav-link">Recommend+</a></li>
+                    <li class="nav-item"><a href="third.html"  target="_blank" class="nav-link" >Page</a></li>
+                    <li class="nav-item"><a href="fourth.html" target="_blank" class="nav-link">Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 네비게이션 영역 끝 -->
+    <section class="container overflow-hidden py-5" id="trend">
+        <div class="text-center py-4">
+          <h1 class="fw-bold mb-3">Page</h1>
+          <p class="lead text-muted">패션에 대해 소통해 보아요!</p>
+        </div>
+        <!--업로드 시작-->
+        <div class="container py-4">
+          <div class="d-flex justify-content-end mb-0">
+            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">업로드 하기</button>
+          </div>
+        
+          <!-- Offcanvas 영역 -->
+          <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Fashion Trend 24 - Page</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <p><b>공유하고 싶은 내용이 있나요?</b></p>
+              <p><b>자유롭게 작성해 주세요!</b></p>
+              <p><b>[추천] [질문] [판매] [투표] [일상] 키워드를 포함해 글을 작성해 주시면, 다른 분들이 작성된 글을 더 찾기 쉬워집니다!</b></p>
+              <p><b>패션에 대해 자유롭게 공유해 보아요~</b></p>
+              <div class="form-floating mb-10">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px">[추천] [질문] [판매] [투표] [일상]</textarea>
+                <label for="floatingTextarea2">여기에 글을 작성해 주세요!</label>
+              </div>
+              <button type="button" class="btn btn-warning" onclick="resetTextarea()" id="popoverButton" data-bs-toggle="popover" data-bs-title="FashionTrend24-page" data-bs-content="업로드 완료!">보내기</button>
+            </div>
+          </div>
+          </div>
+          </div>
+          <script>
+      function resetTextarea() {
+        document.getElementById('floatingTextarea2').value = '';
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl);
+        });
+
+        // Show popover on button click
+        var popoverButton = document.getElementById('popoverButton');
+        popoverButton.addEventListener('click', function () {
+          var popover = bootstrap.Popover.getInstance(popoverButton);
+          popover.show();
+        });
+      });
+      </script>
+              <!--업로드 끝-->
+        <hr class="mb-0 mt-0">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+              <!--포스트 하나-->
+              <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="shadow p-3 post" data-bs-toggle="modal" data-bs-target="#newsModal1">
+                  <img class="rounded" src="images/1041.jpg" width="100%">
+                  <hr class="my-3">
+                  <h4 class="m-0 blackHan">[추천]귀여운 백!!</h4>
+                  <p class="m-0 fs-6 d-inline-block text-truncate" style="width: 100%;">요즘 같은 날씨에 메면 너무 예쁘더라고요~</p>
+        
+                  <!--모달-->
+                  <div class="modal fade" id="newsModal1" tabindex="-1" aria-labelledby="newsModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3>[추천]귀여운 백!!</h3>
+                          <p class="pt-3 ps-4">alio***</p>
+                          <p class="pt-3 ps-3 text-black-50">2024.06.14.Fri</p>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                        </div>
+                        <div class="modal-body position-relative">
+                          <div>
+                            <img src="images/104.jpg" width="50%" class="float-start me-3">
+                            <p>요즘 같은 날씨에 메면 너무 예쁘더라고요~ 가볍고 수납도 꽤 넉넉하게 돼서 맨날 들고 다니게 돼요~ 이거 추천해요~!</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--포스트 하나-->
+              <div class="col-lg-4 col-sm-6 mb-4">
+                <div class=" shadow p-3 post" data-bs-toggle="modal" data-bs-target="#newsModal2">
+                  <img class="rounded" src="images/101.jpg" width="100%">
+                  <hr class="my-3">
+                  <h4 class="m-0 blackHan">[질문]아디다스 삼바 살까요? 가젤 살까요?</h4>
+                  <p class="m-0 fs-6 d-inline-block text-truncate" style="width: 100%;">최근에 블랙핑크 제니님이 삼바를 원피스에 같이 코디하셨더라고요.</p>
+                          <!--모달-->
+                          <div class="modal fade" id="newsModal2" tabindex="-1" aria-labelledby="newsModalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                              <div class="modal-content">
+                              <div class="modal-header">
+                          <h3>[질문]아디다스 삼바 살까요? 가젤 살까요?</h3>
+                          <p class="pt-3 ps-4">vui93***</p>
+                          <p class="pt-3 ps-3 text-black-50">2024.06.12.Wed</p>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                        </div>
+                        <div class="modal-body position-relative">
+                          <div>
+                            <img src="images/101.jpg" width="50%" class="float-start me-3">
+                            <p>최근에 블랙핑크 제니님이 삼바를 원피스에 같이 코디하셨는데 너무 예쁘더라고요! 근데 색은 가젤이 더 다양한 것 같아서 고민이 되네요.. 
+                              삼바나 가젤 사신 분 있나요?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--포스트 하나-->
+              <div class="col-lg-4 col-sm-6 mb-4">
+                <div class=" shadow p-3 post" data-bs-toggle="modal" data-bs-target="#newsModal3">
+                  <img class="rounded" src="images/1081.jpg" width="100%">
+                  <hr class="my-3">
+                  <h4 class="m-0 blackHan">[판매]아디다스 바람막이 S</h4>
+                  <p class="m-0 fs-6 d-inline-block text-truncate" style="width: 100%;">아디다스 바람막이 판매합니다. 사이즈는 S</p>
+        
+                  <!--모달-->
+                  <div class="modal fade" id="newsModal3" tabindex="-1" aria-labelledby="newsModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3>[판매]아디다스 바람막이 S</h3>
+                          <p class="pt-3 ps-4">sioe0***</p>
+                          <p class="pt-3 ps-3 text-black-50">2024.06.10.Mon</p>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                        </div>
+                        <div class="modal-body position-relative">
+                          <div>
+                            <img src="images/108.jpg" width="50%" class="float-start me-3">
+                            <p>아디다스 바람막이 판매합니다. 사이즈는 S 사이즈입니다. 많이 안 입어서 상태 좋아요!</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+            <div class="row g-4 align-items-center">
+            <!--포스트 하나-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class="shadow p-3 post" data-bs-toggle="modal" data-bs-target="#newsModal4">
+                <img class="rounded" src="images/105.jpg" width="100%">
+                <hr class="my-3">
+                <h4 class="m-0 blackHan">[질문]다들 요즘 옷 어디서 사세요?</h4>
+                <p class="m-0 fs-6 d-inline-block text-truncate" style="width: 100%;">에이블리만 이용하다가 이번에 20살이 돼서...</p>
+      
+                <!--모달-->
+                <div class="modal fade" id="newsModal4" tabindex="-1" aria-labelledby="newsModalTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3>[질문]다들 요즘 옷 어디서 사세요?</h3>
+                        <p class="pt-3 ps-4">park3***</p>
+                        <p class="pt-3 ps-3 text-black-50">2024.06.07.Fri</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                      </div>
+                      <div class="modal-body position-relative">
+                        <div>
+                          <img src="images/105.jpg" width="50%" class="float-start me-3">
+                          <p>에이블리만 이용하다가 이번에 20살이 돼서 조금 가격대 있는 브랜드에서 옷 쇼핑해보고 싶어서요! 지그재그, 무신사 말고 다른 어플 추천 부탁드려요!!</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--포스트 하나-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class=" shadow p-3 post" data-bs-toggle="modal" data-bs-target="#newsModal5">
+                <img class="rounded" src="images/107.jpg" width="100%">
+                <hr class="my-3">
+                <h4 class="m-0 blackHan">[질문][투표]가방 1번 2번 중 어떤게 더 나은가요?</h4>
+                <p class="m-0 fs-6 d-inline-block text-truncate" style="width: 100%;">친구랑 한강 갈 때 메려고 하는데.. 어떤 가방이 더 나은가요?</p>
+
+                          <!--모달-->
+                          <div class="modal fade" id="newsModal5" tabindex="-1" aria-labelledby="newsModalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                              <div class="modal-content">
+                              <div class="modal-header">
+                          <h3>[질문][투표]가방 1번 2번 중 어떤게 더 나은가요?</h3>
+                          <p class="pt-3 ps-4">boo1***</p>
+                        <p class="pt-3 ps-3 text-black-50">2024.06.03.Mon</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                      </div>
+                      <div class="modal-body position-relative">
+                        <div>
+                          <img src="images/107.jpg" width="50%" class="float-start me-3">
+                          <p>친구랑 한강 갈 때 메려고 하는데.. 어떤 가방이 더 나은가요? 투표해 주세요!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--포스트 하나-->
+            <div class="col-lg-4 col-sm-6 mb-4">
+              <div class=" shadow p-3 post" data-bs-toggle="modal" data-bs-target="#newsModal6">
+                <img class="rounded" src="images/1031.jpg" width="100%">
+                <hr class="my-3">
+                <h4 class="m-0 blackHan">[추천]유니크한 옷 추천합니당~</h4>
+                <p class="m-0 fs-6 d-inline-block text-truncate" style="width: 100%;">유니크한 디자인이에요! 이 옷 입고</p>
+      
+                <!--모달-->
+                <div class="modal fade" id="newsModal6" tabindex="-1" aria-labelledby="newsModalTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3>[추천]유니크한 옷 추천합니당~</h3>
+                        <p class="pt-3 ps-4">loou88***</p>
+                        <p class="pt-3 ps-3 text-black-50">2024.06.02.Sun</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                      </div>
+                      <div class="modal-body position-relative">
+                        <div>
+                          <img src="images/103.jpg" width="50%" class="float-start me-3">
+                          <p>유니크한 디자인이에요! 이 옷 입고 밖에 나간 날마다 주변에서 다들 잘 어울린다고 하더라고요~~ </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+    </html>
